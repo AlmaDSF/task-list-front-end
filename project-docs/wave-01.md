@@ -34,7 +34,7 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
     - This will be done by changing the Task Key to True this could be done using Passing Down Event Handlers if the task isComplete. 
 
 4. What `props` does `TaskList` have? Where do they come from?
-    
+
     TaskList.js has the props
         id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
