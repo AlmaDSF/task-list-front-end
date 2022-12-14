@@ -18,15 +18,32 @@ In Wave 01, we will explore the starter code for Task List Front End.
 Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style sheets to understand how data and events are being handled. You may use the following questions and suggestions to guide your exploration:
 
 1. What `props` does `Task` have? Where do they come from?
-1. The `Task` component uses destructuring to read in the props `const Task = ({ id, title, isComplete }) => {...`
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    isComplete: PropTypes.bool.isRequired,
+   
+2. The `Task` component uses destructuring to read in the props `const Task = ({ id, title, isComplete }) => {...`
     - How would the code change if `{id, title, isComplete}` were replaced with `props`?
+          - Instead of expecting 3 arguments, the function will need one argument "props". 
+  
     - Consider making this change and the subsequent necessary changes through the rest of the component to deepen your understanding of the code.
-1. How is the ~~strikethrough~~ style applied when the task title is clicked?
+          - To have acces to each argument (`{id, title, isComplete}` we will need to use in the return the props + varName to be able to acces the data. 
+  
+3. How is the ~~strikethrough~~ style applied when the task title is clicked?
     - Consider updating the appropriate rule sets to change the text or background color when a task is marked complete.
-1. What `props` does `TaskList` have? Where do they come from?
-1. Where is the function `getTaskListJSX` called in `TaskList`?
+    - This will be done by changing the Task Key to True this could be done using Passing Down Event Handlers if the task isComplete. 
+
+4. What `props` does `TaskList` have? Where do they come from?
+    
+    TaskList.js has the props
+        id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      isComplete: PropTypes.bool.isRequired,
+
+5. Where is the function `getTaskListJSX` called in `TaskList`?
     - How would the code change without this helper function?
-1. What component is `TASKS` passed to in `App`?
+
+6. What component is `TASKS` passed to in `App`?
     - How does the component pass `TASKS`?
     - What element is the component wrapped in?
 
