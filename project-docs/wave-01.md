@@ -39,14 +39,19 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
 
 5. Where is the function `getTaskListJSX` called in `TaskList`?
    This is in TaskList.js. 
-
     - How would the code change without this helper function?
-The tasklist can create a map or a copy for each task. 
+  
+    The tasklist can create a map or a copy for each task. 
+    - You would have to iterate throught the array given and create a new array with the data individually. 
 
-1. What component is `TASKS` passed to in `App`?
+6. What component is `TASKS` passed to in `App`?
     - How does the component pass `TASKS`?
     The components are key, the id, the title, and if the item is compete. 
-    - What element is the component wrapped in?
+    
+    What element is the component wrapped in?
+    - The id is a number.  
+    - The title is a string. 
+    - The item is a boolean. 
     
 
 The suggestions above should give you a strong foundation for working with Task List Front End. As time allows, follow your curiosity to explore more of the code and features.
