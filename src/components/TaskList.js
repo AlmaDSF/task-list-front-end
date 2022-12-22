@@ -4,7 +4,6 @@ import Task from './Task';
 import './TaskList.css';
 
 const TaskList = ({ tasks }) => {
-  console.log(tasks);
   const getTaskListJSX = (tasks) => {
     return tasks.map((task) => {
       return (

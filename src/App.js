@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TaskList from './components/TaskList.js';
 import './App.css';
 
@@ -16,6 +16,8 @@ const TASKS = [
 ];
 
 const App = () => {
+  const [bikesList, setBikesList] = useState([]);
+
   return (
     <div className="App">
       <header className="App-header">
