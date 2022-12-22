@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TaskList from './components/TaskList.js';
 import './App.css';
+import { useState } from 'react';
 
 const TASKS = [
   {
@@ -15,8 +16,13 @@ const TASKS = [
   },
 ];
 
+// const App = () => {
 const App = () => {
-  const [bikesList, setBikesList] = useState([]);
+  const initialCopy = TASKS.map((task) => {
+    return { ...task };
+  });
+
+  const [taskList, SetTaskList] = useState(initialCopy);
 
   return (
     <div className="App">
@@ -24,7 +30,8 @@ const App = () => {
         <h1>Ada&apos;s Task List</h1>
       </header>
       <main>
-        <div>{<TaskList tasks={TASKS} />}</div>
+        <div>{<TaskList taskList={taskList} />}</div>
+        {/* <div>{<TaskList tasks={TASKS} />}</div> */}
       </main>
     </div>
   );
