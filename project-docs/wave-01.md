@@ -21,13 +21,14 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     isComplete: PropTypes.bool.isRequired,
+    - They come from TaskList.
    
 2. The `Task` component uses destructuring to read in the props `const Task = ({ id, title, isComplete }) => {...`
     - How would the code change if `{id, title, isComplete}` were replaced with `props`?
           - Instead of expecting 3 arguments, the function will need one argument "props". 
   
     - Consider making this change and the subsequent necessary changes through the rest of the component to deepen your understanding of the code.
-          - To have acces to each argument (`{id, title, isComplete}` we will need to use in the return the props + varName to be able to acces the data. 
+          - To have access to each argument (`{id, title, isComplete}` we will need to use in the return the props + varName to be able to access the data. 
   
 3. How is the ~~strikethrough~~ style applied when the task title is clicked?
     - Consider updating the appropriate rule sets to change the text or background color when a task is marked complete.
@@ -35,7 +36,7 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
 
 4. What `props` does `TaskList` have? Where do they come from?
 
-    TaskList.js has the props
+    TaskList.js has the props:
         id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
       isComplete: PropTypes.bool.isRequired,
@@ -44,7 +45,10 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
     - How would the code change without this helper function?
 
 6. What component is `TASKS` passed to in `App`?
+    - TASKS is a list of objects, which each object is a task with an id, tittle, is complete.
+
     - How does the component pass `TASKS`?
+        - Task is passed with an import Task from './Task';
     - What element is the component wrapped in?
 
 The suggestions above should give you a strong foundation for working with Task List Front End. As time allows, follow your curiosity to explore more of the code and features.

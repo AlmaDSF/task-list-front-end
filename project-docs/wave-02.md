@@ -15,9 +15,9 @@ We will update and implement the following features:
 <details>
     <summary>Expand for hints on lifting the state up to <code>App</code></summary>
 
-1. Remove state from the <code>Task</code> component and instead simply render the props.
-2. Update <code>App.js</code> to store the list of task data in state.  
-3. Update the data passed to <code>TaskList</code> through props to use the task data stored in state.
+ >OK< 1. Remove state from the <code>Task</code> component and instead simply render the props.
+ >OK< 2. Update <code>App.js</code> to store the list of task data in state.  
+>OK< 3. Update the data passed to <code>TaskList</code> through props to use the task data stored in state.
 
 </details>
 
