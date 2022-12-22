@@ -4,13 +4,13 @@ import Task from './Task';
 import './TaskList.css';
 
 //nuevo
-const TaskList = ({taskList}) => {
+const TaskList = ({ taskList }) => {
   const getTaskListJSX = (taskList) => {
     return taskList.map((task) => {
-// original
-const TaskList = ({ tasks }) => {
-  const getTaskListJSX = (tasks) => {
-    return tasks.map((task) => {
+      // original
+      // const TaskList = ({ tasks }) => {
+      //   const getTaskListJSX = (tasks) => {
+      //     return tasks.map((task) => {
 
       return (
         <Task
