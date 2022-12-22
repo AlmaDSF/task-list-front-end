@@ -22,6 +22,35 @@ const App = () => {
   });
 
   const [taskList, SetTaskList] = useState(initialCopy);
+  const updateComplete = (taskId, taskIsComplete) => {
+    console.log('updatePrice called');
+
+    const newTaskList = [];
+    for (const task of TaskList) {
+      if (task.id !== taskId) {
+        newTaskList.push(task);
+      } else {
+        const newTask = {
+          ...task,
+          isComplete: taskIsComplete,
+        };
+        newTaskList.push(newTask);
+      }
+    }
+    SetTaskList(newTaskList);
+  };
+
+  const deleteTask = (taskId) => {
+    console.log('deleteTask Called');
+
+    const newTaskList = [];
+    for (const task of taskList) {
+      if (task.id !== taskId) {
+        newTaskList.push(task);
+      }
+    }
+    SetTaskList(newTaskList);
+  };
 
   return (
     <div className="App">
@@ -29,7 +58,15 @@ const App = () => {
         <h1>Ada&apos;s Task List</h1>
       </header>
       <main>
-        <div>{<TaskList taskList={taskList} />}</div>
+        <div>
+          {
+            <TaskList
+              taskList={taskList}
+              deleteTask={deleteTask}
+              updateComplete={updateComplete}
+            />
+          }
+        </div>
         {/* <div>{<TaskList tasks={TASKS} />}</div> */}
       </main>
     </div>
