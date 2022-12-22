@@ -3,9 +3,16 @@ import PropTypes from 'prop-types';
 import Task from './Task';
 import './TaskList.css';
 
+//nuevo
 const TaskList = ({taskList}) => {
   const getTaskListJSX = (taskList) => {
     return taskList.map((task) => {
+// original
+const TaskList = ({ tasks }) => {
+  console.log(tasks);
+  const getTaskListJSX = (tasks) => {
+    return tasks.map((task) => {
+
       return (
         <Task
           key={task.id}
