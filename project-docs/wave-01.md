@@ -35,17 +35,19 @@ Read through the code in `App.js`, `TaskList.js` and `Task.js` and their style s
 
 4. What `props` does `TaskList` have? Where do they come from?
 
-    TaskList.js has the props
-        id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      isComplete: PropTypes.bool.isRequired,
+    TaskList.js has the props which are id that required number, titlethat is requuired and is a string, and lastly if the task is complete is a bool that is required. 
 
 5. Where is the function `getTaskListJSX` called in `TaskList`?
-    - How would the code change without this helper function?
+   This is in TaskList.js. 
 
-6. What component is `TASKS` passed to in `App`?
+    - How would the code change without this helper function?
+The tasklist can create a map or a copy for each task. 
+
+1. What component is `TASKS` passed to in `App`?
     - How does the component pass `TASKS`?
+    The components are key, the id, the title, and if the item is compete. 
     - What element is the component wrapped in?
+    
 
 The suggestions above should give you a strong foundation for working with Task List Front End. As time allows, follow your curiosity to explore more of the code and features.
 
