@@ -12,6 +12,7 @@ function Task(props) {
 
   // const Task = ({ id, title, isComplete }) => {
   // const [complete, setComplete] = useState(taskIsComplete);
+  
   const [isComplete, setIsComplete] = useState(false);
 
   if (isComplete) {
