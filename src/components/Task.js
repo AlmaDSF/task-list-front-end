@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import './Task.css';
 
 function Task(props) {
   const taskId = props.id;
   const taskTitle = props.title;
-  const taskIsComplete = props.isComplete;
+  const isComplete = props.isComplete;
   const deleteTask = props.deleteTask;
   const updateComplete = props.updateComplete;
 
   // const Task = ({ id, title, isComplete }) => {
   // const [complete, setComplete] = useState(taskIsComplete);
-  
-  const [isComplete, setIsComplete] = useState(false);
+  // const [isComplete, setIsComplete] = useState(false);
 
   if (isComplete) {
     console.log(`Is completed ${taskTitle}`);
@@ -21,20 +19,19 @@ function Task(props) {
     console.log(`Is not completed ${taskTitle}`);
   }
 
-  const updateTaskComplete = () => {
+  const updateTaskComplete = (taskId, status) => {
     console.log(`Updating complete for ${isComplete}`);
-    setIsComplete(!isComplete);
+    updateComplete(taskId, status);
   };
 
   const buttonClass = isComplete ? 'tasks__item__toggle--completed' : '';
 
-  // const buttonClass = complete ? 'tasks__item__toggle--completed' : '';
 
   return (
     <li className="tasks__item">
       <button
         className={`tasks__item__toggle ${buttonClass}`}
-        onClick={() => updateTaskComplete()}
+        onClick={() => updateTaskComplete(taskId, !isComplete )}
       >
         {taskTitle}
       </button>

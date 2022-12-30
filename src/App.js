@@ -62,10 +62,16 @@ const App = () => {
   
   const updateComplete = (taskId, taskIsComplete) => {
     console.log('updateComplete called');
-    axios.patch(`${URL}/${taskId}/mark_complete`)
+    let marktask='';
+    if (taskIsComplete === true) {
+      marktask = 'mark_complete';
+    } else if (taskIsComplete === false) {
+      marktask = 'mark_incomplete';
+    }
+    axios.patch(`${URL}/${taskId}/${marktask}`)
     .then(()=> {
       const newTaskList = [];
-      for (const task of TaskList) {
+      for (const task of taskList) {
         if (task.id !== taskId) {
           newTaskList.push(task);
         } else {
@@ -81,7 +87,7 @@ const App = () => {
     .catch((err)=> {
       console.log(err);
     });
-  }
+  };
 
   return (
     <div className="App">
