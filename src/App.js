@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import TaskList from './components/TaskList.js';
 import './App.css';
 import axios from 'axios';
+import NewTaskForm from './components/NewTaskForm.js';
 
 // const TASKS = [
 //   {
@@ -104,6 +105,10 @@ const App = () => {
             />
           }
         </div>
+        <div>
+          <NewTaskForm />
+        </div>
+
         {/* <div>{<TaskList tasks={TASKS} />}</div> */}
       </main>
     </div>

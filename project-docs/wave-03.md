@@ -28,11 +28,11 @@ We can see a summary of the API endpoints that we will work with for the front e
 
 | Verb  | Path  | Body of Request | What it does  |
 |---|---|---|---|
-OK | `GET`  | `/tasks`  | None | Retrieves a list of tasks  |
-OK| `PATCH`  | `/tasks/<task_id>/mark_complete`  | None  | Marks a task complete   |
-| `PATCH`  | `/tasks/<task_id>/mark_incomplete`  | None  | Marks a task incomplete   |
+"OK" | `GET`  | `/tasks`  | None | Retrieves a list of tasks  |
+"OK"| `PATCH`  | `/tasks/<task_id>/mark_complete`  | None  | Marks a task complete   |
+"OK"| `PATCH`  | `/tasks/<task_id>/mark_incomplete`  | None  | Marks a task incomplete   |
 | `POST`  | `/tasks`  | `{ title: titleText, description: '' }` <br> optional key: `completed_at: (date or null)`  | Creates a new Task   |
-OK| `DELETE`  | `/tasks/<task_id>`  | None  | Deletes a task |
+"OK"| `DELETE`  | `/tasks/<task_id>`  | None  | Deletes a task |
 
 ### Cross-Origin Resource Sharing (CORS)
 
